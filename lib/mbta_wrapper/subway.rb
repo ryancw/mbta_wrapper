@@ -2,10 +2,10 @@ module MbtaWrapper
   ##
   # This class represents an individual T (subway train)
   #
-  # Train number is the ID number given by the MBTA
-  # Destination is the end destination of the train
-  # Stops is an array of hashes containing the stop name and seconds until it will be reached
-  # Position is the last updated latitude and longitude coordinates of the train
+  # Train number is the ID number given by the MBTA \n
+  # Destination is the end destination of the train \n
+  # Stops is an array of hashes containing the stop name and seconds until it will be reached \n
+  # Position is the last updated latitude and longitude coordinates of the train \n
   #
   # Subway should be generated from SubwayLine, it will constantly need to be regenerated to reflect current train status
   class Subway
