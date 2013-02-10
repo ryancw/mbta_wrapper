@@ -10,5 +10,17 @@ require 'net/http'
 require 'rexml/document'
 
 module MbtaWrapper
+
+  def MbtaWrapper.orange_line
+    MbtaWrapper::SubwayLine.new('orange')
+  end
+
+  def MbtaWrapper.blue_line
+    MbtaWrapper::SubwayLine.new('blue')
+  end
+
+  def MbtaWrapper.red_line
+    MbtaWrapper::SubwayLine.new('red')
+  end
   
 end

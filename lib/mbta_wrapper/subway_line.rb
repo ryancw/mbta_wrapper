@@ -1,10 +1,26 @@
 module MbtaWrapper
+  ##
+  # This class represents a colored T (subway) line
+  #
+  # It is initialized with the given color
   class SubwayLine
     def initialize(line)
       @line = line
       @default_json_url = "http://developer.mbta.com/lib/rthr/" + @line.to_s.downcase + ".json"
     end
 
+    def get_json(url = @default_json_url)
+      Net::HTTP.get_response(URI.parse(url)).body
+    end
+
+    def parse_json(url = @default_json_url)
+      resp = get_json(url)
+      data = JSON.parse(resp)
+      ready = data['TripList']
+    end
+
+    ##
+    # Returns an array of MbtaWrapper::Subway, representing the current trains running
     def current_trains
       data = parse_json
       current_trains = []
@@ -22,25 +38,16 @@ module MbtaWrapper
       end
       current_trains
     end
-    
 
-    def get_json(url = @default_json_url)
-      Net::HTTP.get_response(URI.parse(url)).body
-    end
-
-    def parse_json(url = @default_json_url)
-      resp = get_json(url)
-      data = JSON.parse(resp)
-      ready = data['TripList']
-    end
-
-    # Number of current active trains
+    ## 
+    # Returns the number of current active trains
     def active_trains
       data = parse_json
       data['Trips'].length
     end
 
-    # Time until next train at station
+    ##
+    # Incomplete
     def time_until(station)
       data = parse_json
       time = 0
@@ -48,7 +55,8 @@ module MbtaWrapper
       end
     end
 
-    # 
+    ##
+    # Incomplete
     def upcoming(number = 10)
       data = parse_json
       data['Trips'].each do |trip|
@@ -63,6 +71,8 @@ module MbtaWrapper
       end
     end
 
+    ##
+    # Incomplete
     def next_stops
     end
   end

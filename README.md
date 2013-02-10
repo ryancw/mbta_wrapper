@@ -41,9 +41,7 @@ To create an array of current trains on the red line:
 ## Contributing
 
 TODO:
-Implement CommuterRail and Bus (lines)
-Create tests
-Think of more ways to supply data
+Implement CommuterRail and Bus (lines), create tests, think of more ways to supply data
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
