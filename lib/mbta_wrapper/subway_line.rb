@@ -9,11 +9,16 @@ module MbtaWrapper
       data = parse_json
       current_trains = []
       data['Trips'].each do |train|
-        train_number = train['TrainNumber']
+        if !train['Position'].nil?
+          train_number = train['Position']['Train'] ||= nil
+          position = {'Latitude' => train['Position']['Lat'], 'Longitude' => train['Position']['Long']}
+        end
         destination = train['Destination']
         stops = []
-        position = {'Latitude' => train['Latitude'], 'Longitude' => train['Longitude']}
-        current_trains << Mbta::Subway.new(train_number, destination, stops, position)
+        train['Predictions'].each do |stop|
+          stops << {'Stop' => stop['Stop'], 'Seconds' => stop['Seconds']}
+        end
+        current_trains << MbtaWrapper::Subway.new(train_number, destination, stops, position)
       end
       current_trains
     end
