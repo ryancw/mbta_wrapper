@@ -1,3 +1,3 @@
 module MbtaWrapper
-  VERSION = "0.0.101"
+  VERSION = "0.0.2"
 end

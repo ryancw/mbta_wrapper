@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sicentendu/mbta_wrapper.png?branch=master)](https://travis-ci.org/sicentendu/mbta_wrapper)
 
-Ruby MBTA API wrapper, nothing is really built yet but maybe it will be soon
+Ruby MBTA API wrapper gem, nothing is really built yet but maybe it will be soon
 
 ## Installation
 
@@ -22,9 +22,13 @@ Or install it yourself as:
 
 This gem provides super easy access to the MBTA's API.
 
-    MbtaWrapper::Subway
-    MbtaWrapper::CommuterRail
-    MbtaWrapper::Bus
+    MbtaWrapper::Subway # Built
+    MbtaWrapper::CommuterRail # Not Built
+    MbtaWrapper::Bus # Not Built
+
+    MbtaWrapper::SubwayLine # Built
+    MbtaWrapper::CommuterRailLine # Not Built
+    MbtaWrapper::BusLine # Not Built
     
 To view the current number of red line trains running:
 
@@ -35,6 +39,11 @@ To create an array of current trains on the red line:
     MbtaWrapper::SubwayLine.new('red').current_trains
 
 ## Contributing
+
+TODO:
+Implement CommuterRail and Bus (lines)
+Create tests
+Think of more ways to supply data
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
