@@ -1,0 +1,60 @@
+{ "TripList": {"CurrentTime": 1360520290,"Line": "Red", "Trips": [{"TripID": "R98308BF6", "Destination": "Ashmont", "Predictions": [
+{"StopID": "70061", "Stop": "Alewife", "Seconds": 985},
+{"StopID": "70063", "Stop": "Davis", "Seconds": 1069},
+{"StopID": "70065", "Stop": "Porter Square", "Seconds": 1192}]},
+{"TripID": "R98308C5D", "Destination": "Alewife", "Position": {"Timestamp": 1360518799, "Train": "1510", "Lat": 42.20749, "Long": -71.00173,"Heading": 190}, "Predictions": [
+{"StopID": "70104", "Stop": "Quincy Adams", "Seconds": 237},
+{"StopID": "70102", "Stop": "Quincy Center", "Seconds": 416},
+{"StopID": "70100", "Stop": "Wollaston", "Seconds": 689},
+{"StopID": "70098", "Stop": "North Quincy", "Seconds": 1195}]},
+{"TripID": "R98308C74", "Destination": "Alewife", "Position": {"Timestamp": 1360519343, "Train": "1639", "Lat": 42.20749, "Long": -71.00156,"Heading": 190}, "Predictions": [
+{"StopID": "70105", "Stop": "Braintree", "Seconds": 710},
+{"StopID": "70104", "Stop": "Quincy Adams", "Seconds": 985},
+{"StopID": "70102", "Stop": "Quincy Center", "Seconds": 1159}]},
+{"TripID": "R98308C2A", "Destination": "Alewife", "Position": {"Timestamp": 1360519774, "Train": "1813", "Lat": 42.28458, "Long": -71.06377,"Heading": 330}, "Predictions": [
+{"StopID": "70094", "Stop": "Ashmont", "Seconds": -10},
+{"StopID": "70092", "Stop": "Shawmut", "Seconds": 64},
+{"StopID": "70090", "Stop": "Fields Corner", "Seconds": 133},
+{"StopID": "70088", "Stop": "Savin Hill", "Seconds": 295},
+{"StopID": "70086", "Stop": "JFK/UMass", "Seconds": 424}]},
+{"TripID": "R98308C9F", "Destination": "Braintree", "Position": {"Timestamp": 1360520257, "Train": "1623", "Lat": 42.38826, "Long": -71.11895,"Heading": 180}, "Predictions": [
+{"StopID": "70067", "Stop": "Harvard Square", "Seconds": 117},
+{"StopID": "70069", "Stop": "Central Square", "Seconds": 310},
+{"StopID": "70071", "Stop": "Kendall/MIT", "Seconds": 432},
+{"StopID": "70073", "Stop": "Charles/MGH", "Seconds": 571},
+{"StopID": "70075", "Stop": "Park Street", "Seconds": 679},
+{"StopID": "70077", "Stop": "Downtown Crossing", "Seconds": 744},
+{"StopID": "70079", "Stop": "South Station", "Seconds": 788},
+{"StopID": "70081", "Stop": "Broadway", "Seconds": 904},
+{"StopID": "70083", "Stop": "Andrew", "Seconds": 1028}]},
+{"TripID": "R98308BF5", "Destination": "Alewife", "Position": {"Timestamp": 1360520075, "Train": "1846", "Lat": 42.36598, "Long": -71.10479,"Heading": 310}, "Predictions": [
+{"StopID": "70066", "Stop": "Porter Square", "Seconds": 370},
+{"StopID": "70064", "Stop": "Davis", "Seconds": 549},
+{"StopID": "70061", "Stop": "Alewife", "Seconds": 746}]},
+{"TripID": "R98308BDC", "Destination": "Ashmont", "Note": "Delayed", "Position": {"Timestamp": 1360519520, "Train": "1840", "Lat": 42.39621, "Long": -71.14054,"Heading": 265}, "Predictions": [
+{"StopID": "70063", "Stop": "Davis", "Seconds": 46},
+{"StopID": "70065", "Stop": "Porter Square", "Seconds": 169},
+{"StopID": "70067", "Stop": "Harvard Square", "Seconds": 319},
+{"StopID": "70069", "Stop": "Central Square", "Seconds": 512},
+{"StopID": "70071", "Stop": "Kendall/MIT", "Seconds": 634}]},
+{"TripID": "R98308CE1", "Destination": "Braintree", "Position": {"Timestamp": 1360519936, "Train": "1705", "Lat": 42.3185, "Long": -71.05212,"Heading": 170}, "Predictions": [
+{"StopID": "70097", "Stop": "North Quincy", "Seconds": 168},
+{"StopID": "70099", "Stop": "Wollaston", "Seconds": 277},
+{"StopID": "70101", "Stop": "Quincy Center", "Seconds": 581},
+{"StopID": "70103", "Stop": "Quincy Adams", "Seconds": 770},
+{"StopID": "70105", "Stop": "Braintree", "Seconds": 1052}]},
+{"TripID": "R98308CE2", "Destination": "Alewife", "Position": {"Timestamp": 1360520260, "Train": "1520", "Lat": 42.27582, "Long": -71.03012,"Heading": 315}, "Predictions": [
+{"StopID": "70096", "Stop": "JFK/UMass", "Seconds": 595},
+{"StopID": "70084", "Stop": "Andrew", "Seconds": 809},
+{"StopID": "70082", "Stop": "Broadway", "Seconds": 933},
+{"StopID": "70080", "Stop": "South Station", "Seconds": 1083},
+{"StopID": "70078", "Stop": "Downtown Crossing", "Seconds": 1154}]},
+{"TripID": "R98308C0F", "Destination": "Ashmont", "Position": {"Timestamp": 1360520261, "Train": "1883", "Lat": 42.35524, "Long": -71.06018,"Heading": 135}, "Predictions": [
+{"StopID": "70079", "Stop": "South Station", "Seconds": 15},
+{"StopID": "70081", "Stop": "Broadway", "Seconds": 131},
+{"StopID": "70083", "Stop": "Andrew", "Seconds": 255},
+{"StopID": "70085", "Stop": "JFK/UMass", "Seconds": 408},
+{"StopID": "70087", "Stop": "Savin Hill", "Seconds": 546},
+{"StopID": "70089", "Stop": "Fields Corner", "Seconds": 714},
+{"StopID": "70091", "Stop": "Shawmut", "Seconds": 831},
+{"StopID": "70093", "Stop": "Ashmont", "Seconds": 981}]}]}}

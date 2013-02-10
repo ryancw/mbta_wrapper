@@ -4,21 +4,27 @@ module MbtaWrapper
       @line = line
     end
 
-    def get_and_parse_json
-      resp = Net::HTTP.get_response(URI.parse("http://developer.mbta.com/lib/rthr/#{@line}.json"))
-      data = JSON.parse(resp.body)
+    DEFAULT_JSON_URL = "http://developer.mbta.com/lib/rthr/#{@line}.json"
+
+    def get_json(url = DEFAULT_JSON_URL)
+      Net::HTTP.get_response(URI.parse(url)).body
+    end
+
+    def parse_json(url = DEFAULT_JSON_URL)
+      resp = get_json(url)
+      data = JSON.parse(resp)
       ready = data['TripList']
     end
 
     # Number of current active trains
     def active_trains
-      data = get_and_parse_json
+      data = parse_json
       data['Trips'].length
     end
 
     # Time until next train at station
     def time_until(station)
-      data = get_and_parse_json
+      data = parse_json
       time = 0
       data['Trips'].each do |trip|
       end
@@ -26,7 +32,7 @@ module MbtaWrapper
 
     # 
     def upcoming(number = 10)
-      data = get_and_parse_json
+      data = parse_json
       data['Trips'].each do |trip|
         first_prediction = trip['Predictions'].first
         stop = first_prediction['Stop']
