@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = MbtaWrapper::VERSION
   gem.authors       = ["Ryan Williams"]
   gem.email         = ["ryancwilliams9@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = "Simple MBTA Ruby wrapper"
+  gem.summary       = "Simple MBTA Ruby wrapper"
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

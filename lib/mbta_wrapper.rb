@@ -6,6 +6,6 @@ require 'json'
 require 'net/http'
 require 'rexml/document'
 
-module MBTAWrapper
-  # Your code goes here...
+module MbtaWrapper
+  
 end
