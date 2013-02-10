@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem provides super easy access to the MBTA's API.
+
+    MbtaWrapper::Subway
+    MbtaWrapper::CommuterRail
+    MbtaWrapper::Bus
+    
+To view the current number of red line trains running:
+
+    MbtaWrapper::Subway.new('red').active_trains
 
 ## Contributing
 
