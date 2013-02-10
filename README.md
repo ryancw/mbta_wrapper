@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sicentendu/mbta_wrapper.png?branch=master)](https://travis-ci.org/sicentendu/mbta_wrapper)
 
-TODO: Write a gem description
+Ruby MBTA API wrapper
 
 ## Installation
 
