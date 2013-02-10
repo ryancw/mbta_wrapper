@@ -1,6 +1,6 @@
 # MbtaWrapper
 
-[![Build Status](https://travis-ci.org/sicentendu/mbta_wrapper.png)](https://travis-ci.org/sicentendu/mbta_wrapper)
+[![Build Status](https://travis-ci.org/sicentendu/mbta_wrapper.png?branch=master)](https://travis-ci.org/sicentendu/mbta_wrapper)
 
 TODO: Write a gem description
 
