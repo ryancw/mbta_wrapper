@@ -11,15 +11,15 @@ require 'rexml/document'
 
 module MbtaWrapper
 
-  def MbtaWrapper.orange_line
+  def self.orange_line
     MbtaWrapper::SubwayLine.new('orange')
   end
 
-  def MbtaWrapper.blue_line
+  def self.blue_line
     MbtaWrapper::SubwayLine.new('blue')
   end
 
-  def MbtaWrapper.red_line
+  def self.red_line
     MbtaWrapper::SubwayLine.new('red')
   end
   
