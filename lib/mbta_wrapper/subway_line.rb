@@ -4,9 +4,11 @@ module MbtaWrapper
   #
   # It is initialized with the given color
   class SubwayLine
+    API_URL = 'http://developer.mbta.com/lib/rthr/'
+
     def initialize(line)
       @line = line
-      @default_json_url = "http://developer.mbta.com/lib/rthr/" + @line.to_s.downcase + ".json"
+      @default_json_url = API_URL + @line.to_s.downcase + ".json"
     end
 
     def get_json(url = @default_json_url)
@@ -26,20 +28,20 @@ module MbtaWrapper
       current_trains = []
       data['Trips'].each do |train|
         if !train['Position'].nil?
-          train_number = train['Position']['Train'] ||= nil
-          position = {'Latitude' => train['Position']['Lat'], 'Longitude' => train['Position']['Long']}
+          train_number = train['Position']['Train']
+          position = {lat: train['Position']['Lat'], long: train['Position']['Long']}
         end
         destination = train['Destination']
         stops = []
         train['Predictions'].each do |stop|
-          stops << {'Stop' => stop['Stop'], 'Seconds' => stop['Seconds']}
+          stops << {stop: stop['Stop'], seconds: stop['Seconds']} # stop needs better name, maybe stop_name or name
         end
         current_trains << MbtaWrapper::Subway.new(train_number, destination, stops, position)
       end
       current_trains
     end
 
-    ## 
+    ##
     # Returns the number of current active trains
     def active_trains
       data = parse_json

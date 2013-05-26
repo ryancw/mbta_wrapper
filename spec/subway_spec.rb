@@ -5,12 +5,12 @@ describe MbtaWrapper::Subway do
     t = create_red_line_train
     t.destination.should == 'Alewife'
     t.train_number.should == '1510'
-    t.stops.class.should == Array
+    t.stops.class.should == Array # terrible
   end
 
   it 'should give the correct next stop' do
     t = create_red_line_train
-    t.next_stop.should == {'Stop' => 'Quincy Adams', 'Seconds' => 237}
+    t.next_stop.should == {stop: 'Quincy Adams', seconds: 237}
   end
 
   it 'should give the correct time to specified stop' do

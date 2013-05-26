@@ -9,27 +9,13 @@ module MbtaWrapper
   #
   # Subway should be generated from SubwayLine, it will constantly need to be regenerated to reflect current train status
   class Subway
+    attr_accessor :train_number, :destination, :stops, :position
+
     def initialize(train_number, destination, stops, position)
       @train_number = train_number
       @destination = destination
       @stops = stops
       @position = position
-    end
-
-    def train_number
-      @train_number
-    end
-
-    def destination
-      @destination
-    end
-
-    def stops
-      @stops
-    end
-
-    def position
-      @position
     end
 
     ##
@@ -41,8 +27,7 @@ module MbtaWrapper
     ##
     # Returns the time in seconds it will take the train to reach the given station
     def time_to_stop_at(station)
-      stops.select {|stop| stop['Stop'] == station}.first['Seconds'] ||= nil
+      stops.select {|stop| stop[:stop] == station}.first[:seconds] ||= nil
     end
   end
 end
-
